@@ -8,6 +8,17 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      HOST: '0.0.0.0'
+      PORT: '1337'
+      APP_KEYS: 'mock'
+      API_TOKEN_SALT: 'mock'
+      ADMIN_JWT_SECRET: 'mock'
+      TRANSFER_TOKEN_SALT: 'mock'
+      DATABASE_CLIENT: 'mock'
+      DATABASE_FILENAME: 'mock'
+      JWT_SECRET: 'mock'
+
 
     strategy:
       matrix:
@@ -15,17 +26,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      env:
-        HOST: '0.0.0.0'
-        PORT: '1337'
-        APP_KEYS: 'mock'
-        API_TOKEN_SALT: 'mock'
-        ADMIN_JWT_SECRET: 'mock'
-        TRANSFER_TOKEN_SALT: 'mock'
-        DATABASE_CLIENT: 'mock'
-        DATABASE_FILENAME: 'mock'
-        JWT_SECRET: 'mock'
-
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
