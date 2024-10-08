@@ -12,6 +12,6 @@ afterAll(async () => {
 
 describe("strapi instance", () => {
   it("is defined", () => {
-    expect(rapi).toBeDefined();
+    expect(trapi).toBeDefined();
   });
 });
