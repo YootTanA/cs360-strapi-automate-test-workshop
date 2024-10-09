@@ -15,3 +15,6 @@ describe("strapi instance", () => {
     expect(strapi).toBeDefined();
   });
 });
+
+require("./user");
+require("./hello");
