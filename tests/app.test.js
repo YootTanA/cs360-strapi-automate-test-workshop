@@ -17,4 +17,3 @@ describe("strapi instance", () => {
 });
 
 require("./user");
-require("./hello");
