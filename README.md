@@ -1,21 +1,16 @@
-
-
 ## This repository contains meterial for CS360 class 1/2024.
 
 
+### How to test things out?
 
+Since most of students in this class use `yarn`, I'm going to use `yarn` in this project.
+However, for those who use `npm`, you can try with `npm` and inform me if there are any problems
 
-create a file  `./tests/hello/index.js`
+To begin you need to install all dependencies. 
 
-    const request = require("supertest");
-    
-    it("should return Hello World!", async () => {
-      const response = await request(strapi.server.httpServer)
-        .get("/api/public/hello")
-        .then((data) => {
-          console.log(data.text);
-          expect(data.status).toBe(200);
-          expect(data.text).toBe("Hello World!");
-        });
-    });
+`yarn install`
+
+Then,
+
+`yarn test`
 
